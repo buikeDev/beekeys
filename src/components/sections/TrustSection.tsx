@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 import { useTrustCompanies } from "../../hooks/useApiData";
 
 export const TrustSection: React.FC = () => {
-  const { data: companies, isLoading } = useTrustCompanies();
+  const { data: companies, isLoading, isError, error } = useTrustCompanies();
 
   if (isLoading) {
     return (
-      <section className="py-16 bg-gray-50">
+      <section className="py-5 bg-gray-50 mt-5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-pulse text-gray-500">
             Loading trusted companies...
@@ -16,6 +16,18 @@ export const TrustSection: React.FC = () => {
       </section>
     );
   }
+
+  if (isError) {
+    return (
+      <section className="py-5 bg-gray-50 mt-5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="text-red-500">Error: {error.message}</div>
+        </div>
+      </section>
+    );
+  }
+
+  console.log("TrustSection companies:", companies);
 
   return (
     <section className="py-5 bg-gray-50 mt-5">

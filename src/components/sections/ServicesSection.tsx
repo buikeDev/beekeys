@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Button } from '../ui/Button';
-import { useServices } from '../../hooks/useApiData';
+import React from "react";
+import { motion } from "framer-motion";
+import { Button } from "../ui/Button";
+import { useServices } from "../../hooks/useApiData";
 
 export const ServicesSection: React.FC = () => {
   const { data: services, isLoading } = useServices();
@@ -44,16 +44,18 @@ export const ServicesSection: React.FC = () => {
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 {/* Content */}
-                <div className="lg:col-span-8">
-                  <h3 className="text-2xl md:text-3xl font-bold text-yellow-500 mb-4">
+                <div className="lg:col-span-8 ">
+                  <h3 className="text-2xl md:text-3xl lg:text-[76px] font-bold text-yellow-500 mb-16 lg:w-[300px]">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                    {service.description}
-                  </p>
-                  <Button variant="outline" size="md">
-                    {service.ctaText}
-                  </Button>
+                  <div>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                      {service.description}
+                    </p>
+                    <Button variant="outline" size="md">
+                      {service.ctaText}
+                    </Button>
+                  </div>
                 </div>
 
                 {/* Number */}

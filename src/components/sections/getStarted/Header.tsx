@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Logo } from "../common/Logo";
-import { Button } from "../ui/Button";
+import { Logo } from "../../common/Logo";
+import { Button } from "../../ui/Button";
 import {
   BrowserRouter as Router,
   Routes,
@@ -39,21 +39,21 @@ export const Header: React.FC = () => {
             ))}
           </nav>
 
-          <div className="hidden md:flex items-center space-x-4">
+          {/* <div className="hidden md:flex items-center space-x-4">
             <Button variant="primary" size="sm">
               Sign In
             </Button>
             <Button variant="yellow" size="sm" to="/search">
               Get Started
             </Button>
-          </div>
+          </div> */}
 
           {/* Desktop Actions */}
-          {/* <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-4">
             <Button variant="yellow" size="sm">
               Explore location
             </Button>
-          </div> */}
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -84,10 +84,7 @@ export const Header: React.FC = () => {
               ))}
               <div className="flex flex-col space-y-2 pt-4 border-t border-gray-100">
                 <Button variant="outline" size="sm">
-                  Sign In
-                </Button>
-                <Button variant="yellow" size="sm" to="/search">
-                  Get Started
+                  Explore location
                 </Button>
               </div>
             </nav>

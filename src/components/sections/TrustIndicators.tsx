@@ -11,11 +11,11 @@ const iconMap = {
 };
 
 export const TrustIndicators: React.FC = () => {
-  const { data: indicators, isLoading } = useTrustIndicators();
+  const { data: indicators, isLoading, isError, error } = useTrustIndicators();
 
   if (isLoading) {
     return (
-      <section className="py-16 bg-gray-900">
+      <section className="py-5 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-pulse text-gray-400">
             Loading trust indicators...
@@ -24,6 +24,18 @@ export const TrustIndicators: React.FC = () => {
       </section>
     );
   }
+
+  if (isError) {
+    return (
+      <section className="py-5 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="text-red-400">Error: {error.message}</div>
+        </div>
+      </section>
+    );
+  }
+
+  console.log("TrustIndicators indicators:", indicators);
 
   return (
     <section className="py-5 bg-gray-900 text-[12px]">
