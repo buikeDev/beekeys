@@ -15,6 +15,10 @@ import {
   ActionCard,
   BenefitItem,
   ImpactCTA,
+  NigeriaHero,
+  GovernmentService,
+  BusinessListing,
+  NigerianState,
 } from "../types";
 import {
   heroContent,
@@ -31,6 +35,10 @@ import {
   actionCards,
   benefitItems,
   impactCTA,
+  nigeriaHero,
+  governmentServices,
+  businessListings,
+  nigerianStates,
 } from "../data/staticData";
 
 // Simulate API delay
@@ -105,5 +113,25 @@ export const api = {
   async getImpactCTA(): Promise<ImpactCTA> {
     await delay(350);
     return impactCTA;
+  },
+
+  async getNigeriaHero(): Promise<NigeriaHero> {
+    await delay(300);
+    return nigeriaHero;
+  },
+
+  async getGovernmentServices(): Promise<GovernmentService[]> {
+    await delay(400);
+    return governmentServices;
+  },
+
+  async getBusinessListings(): Promise<BusinessListing[]> {
+    await delay(500);
+    return businessListings;
+  },
+
+  async getNigerianStates(): Promise<NigerianState[]> {
+    await delay(350);
+    return nigerianStates;
   },
 };

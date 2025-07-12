@@ -5,6 +5,10 @@ import {
   HowItWorksStep,
   TrustIndicator,
   HeroContent,
+  NigeriaHero,
+  GovernmentService,
+  BusinessListing,
+  NigerianState,
 } from "../types";
 import {
   FeatureCard,
@@ -320,3 +324,198 @@ export const impactCTA: ImpactCTA = {
   backgroundImage:
     "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600",
 };
+
+export const nigeriaHero: NigeriaHero = {
+  title: "Discover Amazing Places Around You",
+  subtitle:
+    "The simplest, smartest way to find businesses, services, and hidden gems across Nigeria. Your local discovery starts here",
+  description:
+    "Find verified businesses, government services, and local gems across all Nigerian states",
+  backgroundImage:
+    "https://images.pexels.com/photos/789750/pexels-photo-789750.jpeg?auto=compress&cs=tinysrgb&w=1920",
+  searchPlaceholder: "Search businesses in any Nigerian...",
+};
+
+export const governmentServices: GovernmentService[] = [
+  {
+    id: "1",
+    name: "Fire Station",
+    type: "fire",
+    image:
+      "https://images.pexels.com/photos/280076/pexels-photo-280076.jpeg?auto=compress&cs=tinysrgb&w=600",
+    description: "Emergency fire services and rescue operations",
+    contactInfo: "199",
+    themeColor: "red",
+  },
+  {
+    id: "2",
+    name: "Police Station",
+    type: "police",
+    image:
+      "https://images.pexels.com/photos/8112199/pexels-photo-8112199.jpeg?auto=compress&cs=tinysrgb&w=600",
+    description: "Law enforcement and public safety services",
+    contactInfo: "199",
+    themeColor: "blue",
+  },
+  {
+    id: "3",
+    name: "Road Safety",
+    type: "road-safety",
+    image:
+      "https://images.pexels.com/photos/5025639/pexels-photo-5025639.jpeg?auto=compress&cs=tinysrgb&w=600",
+    description: "Traffic management and road safety enforcement",
+    contactInfo: "122",
+    themeColor: "green",
+  },
+  {
+    id: "4",
+    name: "Emergency Services",
+    type: "emergency",
+    image:
+      "https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=600",
+    description: "General emergency response and medical services",
+    contactInfo: "112",
+    themeColor: "white",
+  },
+];
+
+export const businessListings: BusinessListing[] = [
+  {
+    id: "1",
+    name: "Jollof Palace Restaurant",
+    category: "Restaurant",
+    location: "Victoria Island",
+    state: "Lagos",
+    image:
+      "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
+    rating: 4.5,
+    verified: true,
+    description: "Authentic Nigerian cuisine with modern twist",
+    contact: {
+      phone: "+234 801 234 5678",
+      address: "15 Ahmadu Bello Way, Victoria Island, Lagos",
+    },
+    tags: ["Nigerian Cuisine", "Fine Dining", "Delivery"],
+  },
+  {
+    id: "2",
+    name: "Eko Hotel & Suites",
+    category: "Hotel",
+    location: "Victoria Island",
+    state: "Lagos",
+    image:
+      "https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=600",
+    rating: 4.8,
+    verified: true,
+    description: "Luxury accommodation in the heart of Lagos",
+    contact: {
+      phone: "+234 701 234 5678",
+      address: "1415 Adetokunbo Ademola Street, Victoria Island, Lagos",
+    },
+    tags: ["Luxury", "Business Center", "Pool"],
+  },
+  {
+    id: "3",
+    name: "Shoprite Ikeja",
+    category: "Shopping",
+    location: "Ikeja",
+    state: "Lagos",
+    image:
+      "https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg?auto=compress&cs=tinysrgb&w=600",
+    rating: 4.2,
+    verified: true,
+    description: "One-stop shopping destination for groceries and more",
+    contact: {
+      phone: "+234 901 234 5678",
+      address: "Ikeja City Mall, Obafemi Awolowo Way, Ikeja, Lagos",
+    },
+    tags: ["Groceries", "Electronics", "Fashion"],
+  },
+  {
+    id: "4",
+    name: "Lagos University Teaching Hospital",
+    category: "Healthcare",
+    location: "Surulere",
+    state: "Lagos",
+    image:
+      "https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=600",
+    rating: 4.0,
+    verified: true,
+    description: "Leading medical facility providing comprehensive healthcare",
+    contact: {
+      phone: "+234 802 234 5678",
+      address: "Idi-Araba, Surulere, Lagos",
+    },
+    tags: ["Emergency Care", "24/7", "Specialist Care"],
+  },
+  {
+    id: "5",
+    name: "Terra Kulture",
+    category: "Entertainment",
+    location: "Tiamiyu Savage",
+    state: "Lagos",
+    image:
+      "https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=600",
+    rating: 4.6,
+    verified: true,
+    description: "Cultural center showcasing Nigerian arts, crafts and cuisine",
+    contact: {
+      phone: "+234 703 234 5678",
+      address: "Tiamiyu Savage Street, Victoria Island, Lagos",
+    },
+    tags: ["Arts", "Culture", "Events"],
+  },
+  {
+    id: "6",
+    name: "Zenith Bank Headquarters",
+    category: "Banking",
+    location: "Victoria Island",
+    state: "Lagos",
+    image:
+      "https://images.pexels.com/photos/259027/pexels-photo-259027.jpeg?auto=compress&cs=tinysrgb&w=600",
+    rating: 4.3,
+    verified: true,
+    description:
+      "Leading Nigerian bank offering comprehensive financial services",
+    contact: {
+      phone: "+234 704 234 5678",
+      address: "Plot 84, Ajose Adeogun Street, Victoria Island, Lagos",
+    },
+    tags: ["Banking", "ATM", "Corporate Banking"],
+  },
+];
+
+export const nigerianStates: NigerianState[] = [
+  {
+    id: "1",
+    name: "Lagos",
+    image:
+      "https://images.pexels.com/photos/789750/pexels-photo-789750.jpeg?auto=compress&cs=tinysrgb&w=600",
+    businessCount: 1250,
+    featured: true,
+  },
+  {
+    id: "2",
+    name: "Abuja",
+    image:
+      "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600",
+    businessCount: 890,
+    featured: true,
+  },
+  {
+    id: "3",
+    name: "Kano",
+    image:
+      "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600",
+    businessCount: 650,
+    featured: false,
+  },
+  {
+    id: "4",
+    name: "Rivers",
+    image:
+      "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=600",
+    businessCount: 420,
+    featured: false,
+  },
+];

@@ -106,3 +106,45 @@ export interface ImpactCTA {
   ctaText: string;
   backgroundImage: string;
 }
+export interface NigeriaHero {
+  title: string;
+  subtitle: string;
+  description: string;
+  backgroundImage: string;
+  searchPlaceholder: string;
+}
+
+export interface GovernmentService {
+  id: string;
+  name: string;
+  type: string;
+  image: string;
+  description: string;
+  contactInfo: string;
+  themeColor: string;
+}
+
+export interface BusinessListing {
+  id: string;
+  name: string;
+  category: string;
+  location: string;
+  state: string;
+  image: string;
+  rating: number;
+  verified: boolean;
+  description: string;
+  contact: {
+    phone: string;
+    address: string;
+  };
+  tags: string[];
+}
+
+export interface NigerianState {
+  id: string;
+  name: string;
+  image: string;
+  businessCount: number;
+  featured: boolean;
+}

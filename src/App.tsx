@@ -4,6 +4,7 @@ import { Layout } from "./components/layout/Layout";
 import { LandingPage } from "./pages/LandingPage";
 import { SearchPage } from "./pages/SearchPage";
 import { ContributorPage } from "./pages/ContributorPage";
+import { NigeriaPage } from "./pages/NigeriaPage";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -23,6 +24,7 @@ function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/search" element={<SearchPage />} />
             <Route path="/contributor" element={<ContributorPage />} />
+            <Route path="/nigeria" element={<NigeriaPage />} />
           </Routes>
         </Layout>
       </Router>

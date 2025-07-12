@@ -112,3 +112,35 @@ export const useImpactCTA = () => {
     staleTime: 1000 * 60 * 10,
   });
 };
+
+export const useNigeriaHero = () => {
+  return useQuery({
+    queryKey: ["nigeriaHero"],
+    queryFn: api.getNigeriaHero,
+    staleTime: 1000 * 60 * 5,
+  });
+};
+
+export const useGovernmentServices = () => {
+  return useQuery({
+    queryKey: ["governmentServices"],
+    queryFn: api.getGovernmentServices,
+    staleTime: 1000 * 60 * 10,
+  });
+};
+
+export const useBusinessListings = () => {
+  return useQuery({
+    queryKey: ["businessListings"],
+    queryFn: api.getBusinessListings,
+    staleTime: 1000 * 60 * 5,
+  });
+};
+
+export const useNigerianStates = () => {
+  return useQuery({
+    queryKey: ["nigerianStates"],
+    queryFn: api.getNigerianStates,
+    staleTime: 1000 * 60 * 10,
+  });
+};
