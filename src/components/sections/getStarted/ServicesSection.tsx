@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Button } from "../ui/Button";
-import { useServices } from "../../hooks/useApiData";
+import { Button } from "../../ui/Button";
+import { useServices } from "../../../hooks/useApiData";
 
 export const ServicesSection: React.FC = () => {
   const { data: services, isLoading } = useServices();
@@ -24,9 +24,10 @@ export const ServicesSection: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <span className="text-sm md:text-md">What We Do</span>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
             Services
           </h2>
         </motion.div>
@@ -42,25 +43,35 @@ export const ServicesSection: React.FC = () => {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="relative"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center my-auto">
                 {/* Content */}
                 <div className="lg:col-span-8 ">
-                  <h3 className="text-2xl md:text-3xl lg:text-[76px] font-bold text-yellow-500 mb-16 lg:w-[300px]">
+                  <h3 className="text-2xl md:text-3xl lg:text-[50px] font-bold text-yellow-500 mb-16 ">
                     {service.title}
                   </h3>
-                  <div>
-                    <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                  <div className="flex justify-between items-center">
+                    <p className="text-gray-600 text-sm leading-relaxed mb-6 lg:w-[300px]  ">
                       {service.description}
                     </p>
-                    <Button variant="outline" size="md">
+                    <Button
+                      variant="outline"
+                      size="md"
+                      className="rounded-[20px] text-[12px] flex justify-center items-center gap-1"
+                      to={service.ctaLink}
+                    >
                       {service.ctaText}
+                      <img
+                        src="/icons/Explore-icon.png"
+                        alt="explore icon"
+                        className="w-[9px] h-[9px]"
+                      />
                     </Button>
                   </div>
                 </div>
 
                 {/* Number */}
                 <div className="lg:col-span-4 flex justify-center lg:justify-end">
-                  <div className="text-8xl md:text-9xl font-bold text-yellow-400/20">
+                  <div className="text-8xl md:text-9xl font-bold text-yellow-400">
                     {service.number}
                   </div>
                 </div>

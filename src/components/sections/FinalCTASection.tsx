@@ -58,9 +58,9 @@ export const FinalCTASection: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <Button
-              variant="yellow"
+              variant="primary"
               size="lg"
-              className="text-lg px-8 py-4"
+              className="text-lg px-8 py-4 bg-[#DBB1091A]"
               to="/search"
             >
               Join Beekeys Community

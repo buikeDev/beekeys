@@ -3,7 +3,7 @@ export interface Feature {
   icon: string;
   title: string;
   description: string;
-  color: 'yellow' | 'green' | 'orange' | 'blue';
+  color: "yellow" | "green" | "orange" | "blue";
   benefits: string[];
 }
 
@@ -15,7 +15,7 @@ export interface TrustCompany {
 
 export interface UserTypeCard {
   id: string;
-  type: 'business-seeker' | 'business-owner' | 'affiliate';
+  type: "business-seeker" | "business-owner" | "affiliate";
   title: string;
   description: string;
   image: string;
@@ -74,4 +74,35 @@ export interface SearchHeroContent {
   badge: string;
   title: string;
   description: string;
+}
+
+export interface ContributorHero {
+  title: string;
+  description: string;
+  ctaText: string;
+  image: string;
+}
+
+export interface ActionCard {
+  id: string;
+  title: string;
+  description: string;
+  backgroundImage: string;
+  icon?: string;
+}
+
+export interface BenefitItem {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  image: string;
+  features: string[];
+}
+
+export interface ImpactCTA {
+  title: string;
+  description: string;
+  ctaText: string;
+  backgroundImage: string;
 }

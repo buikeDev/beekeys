@@ -6,7 +6,16 @@ import {
   TrustIndicator,
   HeroContent,
 } from "../types";
-import { FeatureCard, Service, Testimonial, SearchHeroContent } from "../types";
+import {
+  FeatureCard,
+  Service,
+  Testimonial,
+  SearchHeroContent,
+  ContributorHero,
+  ActionCard,
+  BenefitItem,
+  ImpactCTA,
+} from "../types";
 
 export const heroContent: HeroContent = {
   badge: "Over 200+ verified business",
@@ -202,7 +211,7 @@ export const services: Service[] = [
   {
     id: "1",
     number: "01",
-    title: "Business/Service/Brand Owner",
+    title: `Business/Service/Brand Owner`,
     description:
       "Own, Operate and grow businesses can easily showcase their business information in simple effective ways across all locations. Both on and offline.",
     ctaText: "Explore more",
@@ -237,3 +246,77 @@ export const testimonials: Testimonial[] = [
     role: "Business Owner",
   },
 ];
+
+export const contributorHero: ContributorHero = {
+  title: "Empower Local Businesses. Earn as a Beekeys Contributor.",
+  description:
+    "Join our community of local business advocates and earn rewards while helping businesses thrive. As a Beekeys Contributor, you'll help verify business information, add valuable insights, and build trust in your local community.",
+  ctaText: "Get Started",
+  image: "/images/hero.jpg",
+};
+
+export const actionCards: ActionCard[] = [
+  {
+    id: "1",
+    title: "Photograph Local Businesses and Landmarks",
+    description:
+      "Capture high-quality photos of local businesses, storefronts, and landmarks to help customers find and recognize them easily.",
+    backgroundImage:
+      "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600",
+  },
+  {
+    id: "2",
+    title: "Add Descriptive Data",
+    description:
+      "Provide detailed information about business hours, services, contact details, and other relevant information to help customers.",
+    backgroundImage:
+      "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=600",
+  },
+  {
+    id: "3",
+    title: "Share Local Insights",
+    description:
+      "Share your local knowledge about businesses, events, and community insights that help others discover great local services.",
+    backgroundImage:
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600",
+  },
+];
+
+export const benefitItems: BenefitItem[] = [
+  {
+    id: "1",
+    title: "Enhances Platform Accuracy",
+    description:
+      "Your contributions help maintain the most accurate and up-to-date business information on our platform.",
+    icon: "check-circle",
+    image: "/images/Container.png",
+    features: ["Verified Content", "Quality Assurance"],
+  },
+  {
+    id: "2",
+    title: "Builds Community Trust",
+    description:
+      "Your contributions help maintain the most accurate and up-to-date business information on our platform.",
+    icon: "shield-check",
+    image: "/images/Container.png",
+    features: ["Community Impact", "Trust Building"],
+  },
+  {
+    id: "3",
+    title: "Earns Rewards",
+    description:
+      "Your contributions help maintain the most accurate and up-to-date business information on our platform.",
+    icon: "star",
+    image: "/images/Container.png",
+    features: ["Monetary Rewards", "Recognition"],
+  },
+];
+
+export const impactCTA: ImpactCTA = {
+  title: "Ready to Make an Impact?",
+  description:
+    "Join thousands of contributors who are helping local businesses thrive. Start earning rewards while making a difference in your community today.",
+  ctaText: "Get Started",
+  backgroundImage:
+    "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600",
+};

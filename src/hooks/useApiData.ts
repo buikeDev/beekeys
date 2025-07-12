@@ -1,9 +1,9 @@
-import { useQuery } from '@tanstack/react-query';
-import { api } from '../services/api';
+import { useQuery } from "@tanstack/react-query";
+import { api } from "../services/api";
 
 export const useHeroContent = () => {
   return useQuery({
-    queryKey: ['heroContent'],
+    queryKey: ["heroContent"],
     queryFn: api.getHeroContent,
     staleTime: 1000 * 60 * 5, // 5 minutes
   });
@@ -11,7 +11,7 @@ export const useHeroContent = () => {
 
 export const useFeatures = () => {
   return useQuery({
-    queryKey: ['features'],
+    queryKey: ["features"],
     queryFn: api.getFeatures,
     staleTime: 1000 * 60 * 5,
   });
@@ -19,7 +19,7 @@ export const useFeatures = () => {
 
 export const useTrustCompanies = () => {
   return useQuery({
-    queryKey: ['trustCompanies'],
+    queryKey: ["trustCompanies"],
     queryFn: api.getTrustCompanies,
     staleTime: 1000 * 60 * 10,
   });
@@ -27,7 +27,7 @@ export const useTrustCompanies = () => {
 
 export const useUserTypeCards = () => {
   return useQuery({
-    queryKey: ['userTypeCards'],
+    queryKey: ["userTypeCards"],
     queryFn: api.getUserTypeCards,
     staleTime: 1000 * 60 * 5,
   });
@@ -35,7 +35,7 @@ export const useUserTypeCards = () => {
 
 export const useHowItWorksSteps = () => {
   return useQuery({
-    queryKey: ['howItWorksSteps'],
+    queryKey: ["howItWorksSteps"],
     queryFn: api.getHowItWorksSteps,
     staleTime: 1000 * 60 * 5,
   });
@@ -43,7 +43,7 @@ export const useHowItWorksSteps = () => {
 
 export const useTrustIndicators = () => {
   return useQuery({
-    queryKey: ['trustIndicators'],
+    queryKey: ["trustIndicators"],
     queryFn: api.getTrustIndicators,
     staleTime: 1000 * 60 * 10,
   });
@@ -51,7 +51,7 @@ export const useTrustIndicators = () => {
 
 export const useSearchHeroContent = () => {
   return useQuery({
-    queryKey: ['searchHeroContent'],
+    queryKey: ["searchHeroContent"],
     queryFn: api.getSearchHeroContent,
     staleTime: 1000 * 60 * 5,
   });
@@ -59,7 +59,7 @@ export const useSearchHeroContent = () => {
 
 export const useFeatureCards = () => {
   return useQuery({
-    queryKey: ['featureCards'],
+    queryKey: ["featureCards"],
     queryFn: api.getFeatureCards,
     staleTime: 1000 * 60 * 5,
   });
@@ -67,7 +67,7 @@ export const useFeatureCards = () => {
 
 export const useServices = () => {
   return useQuery({
-    queryKey: ['services'],
+    queryKey: ["services"],
     queryFn: api.getServices,
     staleTime: 1000 * 60 * 5,
   });
@@ -75,8 +75,40 @@ export const useServices = () => {
 
 export const useTestimonials = () => {
   return useQuery({
-    queryKey: ['testimonials'],
+    queryKey: ["testimonials"],
     queryFn: api.getTestimonials,
+    staleTime: 1000 * 60 * 10,
+  });
+};
+
+export const useContributorHero = () => {
+  return useQuery({
+    queryKey: ["contributorHero"],
+    queryFn: api.getContributorHero,
+    staleTime: 1000 * 60 * 5,
+  });
+};
+
+export const useActionCards = () => {
+  return useQuery({
+    queryKey: ["actionCards"],
+    queryFn: api.getActionCards,
+    staleTime: 1000 * 60 * 5,
+  });
+};
+
+export const useBenefitItems = () => {
+  return useQuery({
+    queryKey: ["benefitItems"],
+    queryFn: api.getBenefitItems,
+    staleTime: 1000 * 60 * 5,
+  });
+};
+
+export const useImpactCTA = () => {
+  return useQuery({
+    queryKey: ["impactCTA"],
+    queryFn: api.getImpactCTA,
     staleTime: 1000 * 60 * 10,
   });
 };
