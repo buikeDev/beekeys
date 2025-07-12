@@ -1,3 +1,4 @@
+// This component shows the footer at the bottom of the page. It has company info, contact, and quick links.
 import React from "react";
 import { Logo } from "../common/Logo";
 import { Facebook, Twitter, Instagram } from "lucide-react";
@@ -15,6 +16,7 @@ export const Footer: React.FC = () => {
               Brands
             </p>
             <div className="flex space-x-4">
+              {/* Social media icons */}
               <Facebook className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
               <Twitter className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
               <Instagram className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
@@ -65,6 +67,7 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
+        {/* Copyright */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; 2024. All Rights Reserved. Beekeys</p>
         </div>

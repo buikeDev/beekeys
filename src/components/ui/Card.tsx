@@ -1,34 +1,27 @@
+// This is a reusable Card component. It wraps content in a nice box with optional hover and style options.
 import React from "react";
 import { motion } from "framer-motion";
 
 interface CardProps {
-  children: React.ReactNode;
-  className?: string;
-  hover?: boolean;
-  variant?: "default" | "borderless";
+  children: React.ReactNode; // The content inside the card
+  className?: string; // Extra CSS classes
+  hover?: boolean; // If true, the card will have a hover effect
+  variant?: "default" | "borderless"; // Style type
 }
 
+// This component makes it easy to show content in a styled card box
 export const Card: React.FC<CardProps> = ({
   children,
   className = "",
   hover = true,
   variant = "default",
 }) => {
-  const baseClasses = "bg-white rounded-xl shadow-lg";
-
-  // Variant-specific classes
-  const variantClasses = {
-    default: "border border-gray-100 shadow-lg",
-    borderless: "border-none shadow-none",
-  };
-
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      whileHover={hover ? { y: -5 } : {}}
-      className={`bg-white rounded-xl ${baseClasses} ${variantClasses[variant]}  ${className}`}
+      whileHover={hover ? { scale: 1.02 } : {}}
+      className={`rounded-xl bg-white shadow-md p-6 ${
+        variant === "borderless" ? "border-0" : "border border-gray-100"
+      } ${className}`}
     >
       {children}
     </motion.div>

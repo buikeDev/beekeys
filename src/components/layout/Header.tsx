@@ -1,3 +1,4 @@
+// This component shows the top navigation bar (header) with logo, links, and buttons.
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Logo } from "../common/Logo";
@@ -10,9 +11,11 @@ import {
 } from "react-router-dom";
 
 export const Header: React.FC = () => {
+  // This state controls if the mobile menu is open or closed
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
 
+  // These are the navigation links shown in the header
   const navItems = [
     { label: "Features", href: "#features" },
     { label: "Pricing", href: "#pricing" },
@@ -24,9 +27,10 @@ export const Header: React.FC = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
+          {/* Logo on the left */}
           <Logo />
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation Links */}
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <a
@@ -39,6 +43,7 @@ export const Header: React.FC = () => {
             ))}
           </nav>
 
+          {/* Desktop Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <Button variant="primary" size="sm">
               Sign In
@@ -48,14 +53,7 @@ export const Header: React.FC = () => {
             </Button>
           </div>
 
-          {/* Desktop Actions */}
-          {/* <div className="hidden md:flex items-center space-x-4">
-            <Button variant="yellow" size="sm">
-              Explore location
-            </Button>
-          </div> */}
-
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button (shows/hides menu) */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
@@ -68,7 +66,7 @@ export const Header: React.FC = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation (shows when menu is open) */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-100">
             <nav className="flex flex-col space-y-4">

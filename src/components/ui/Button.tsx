@@ -1,3 +1,4 @@
+// This is a reusable Button component. It can look different based on props and can also navigate to other pages.
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -13,9 +14,10 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     | "blue";
   size?: "sm" | "md" | "lg";
   children: React.ReactNode;
-  to?: string;
+  to?: string; // If set, clicking the button will go to this page
 }
 
+// This button can be styled and can also navigate to another page if 'to' is set
 export const Button: React.FC<ButtonProps> = ({
   variant = "primary",
   size = "md",
@@ -27,6 +29,7 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   const navigate = useNavigate();
 
+  // These are the style options for the button
   const baseClasses =
     "inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2";
 
@@ -51,6 +54,7 @@ export const Button: React.FC<ButtonProps> = ({
     lg: "px-6 py-3 text-lg",
   };
 
+  // This handles button clicks. If 'to' is set, it navigates to that page.
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     if (to) {
       navigate(to);
