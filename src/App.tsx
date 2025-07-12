@@ -5,6 +5,7 @@ import { LandingPage } from "./pages/LandingPage";
 import { SearchPage } from "./pages/SearchPage";
 import { ContributorPage } from "./pages/ContributorPage";
 import { NigeriaPage } from "./pages/NigeriaPage";
+import WorldMap from "./components/sections/exploreLocationSection/WorldMap";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -25,6 +26,7 @@ function App() {
             <Route path="/search" element={<SearchPage />} />
             <Route path="/contributor" element={<ContributorPage />} />
             <Route path="/nigeria" element={<NigeriaPage />} />
+            <Route path="/map" element={<WorldMap />} />
           </Routes>
         </Layout>
       </Router>

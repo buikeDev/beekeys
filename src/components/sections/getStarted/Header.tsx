@@ -50,7 +50,7 @@ export const Header: React.FC = () => {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="yellow" size="sm">
+            <Button variant="yellow" size="sm" to="/map">
               Explore location
             </Button>
           </div>
@@ -83,7 +83,7 @@ export const Header: React.FC = () => {
                 </a>
               ))}
               <div className="flex flex-col space-y-2 pt-4 border-t border-gray-100">
-                <Button variant="outline" size="sm">
+                <Button variant="outline" size="sm" to="/map">
                   Explore location
                 </Button>
               </div>
