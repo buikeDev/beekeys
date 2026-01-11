@@ -1,5 +1,34 @@
-Step 1: Launch the App and the homepage will be loaded
-step 2: CLick the the get started button on the Nav to navigate to the second page.
-step 3: On the second page, scroll down till you get to the what we do section on the cards, the card titled Contributor, click on the "explore" button to navigate to the next page.
-step 4: On this page click on the "explore location" button on the Nav to navigate to the next page.
-step 5: on this page click on the icon with Nigeria on it, to move to the last page.
+Beekeys
+
+Beekeys is a client project aimed at providing businesses with a platform for marketing, sales, booking, and information management.
+
+Features
+
+Supports business operations such as marketing, sales tracking, and bookings
+
+Fully functional frontend built with modern tools
+
+Responsive design with smooth animations
+
+Tech Stack
+
+Frontend: Next.js, TypeScript, Tailwind CSS
+
+UI & Animation: Framer Motion, Radix UI
+
+Additional Info
+
+NPM for package management
+
+Excludes contact form, SEO, and social links for now
+
+Licensed under MIT
+
+Status
+
+Currently in progress
+
+Author
+
+Ago Chukwubuikem Jideofor
+GitHub
